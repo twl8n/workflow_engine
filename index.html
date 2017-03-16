@@ -1,0 +1,45 @@
+<html>
+  <head><title>Demo</title></head>
+  <body style="font-family:arial;">
+    <div id="container" style="">
+      <form action="index.pl" method="get">
+        <span style="background-color:lightgreen;">Current state: $curr_state</span>
+        <br>
+        <div style="padding-left:5px; padding-top:2px; float:left; width:400px;border-top: 1px solid black;">
+          $msg
+          $options_list_str
+        </div>
+        <div style="padding-left:5px; padding-top:2px; padding-bottom:10px;margin-left:410px;border: 2px solid black;">
+          Tests. Check these options to simulate button clicks and current web page.
+          <br>
+          <br>
+          $options
+          <br>
+          <span style="background-color:lightblue; padding-left:60px; padding-right:60px; padding-top:5px;padding-bottom:5px;">
+            <input type="submit" name="submit" value="Go">
+          </span>
+          <p>
+            Try this example:
+          </p>
+          <p>
+            Uncheck all, press Go, and your current state becomes login-input. (See current state in the upper left corner.)
+          </p>
+          <p>
+            Check if-logged-in, press Go, and your current state becomes dashboard-input.
+          </p>
+          <p>
+            Check if-go-search, press Go, and your current state becomes search-input.
+          </p>
+          <p>
+            Check if-do-search, press Go, note "Dispatch function: run-search" means in the real application a
+            search would be run, and your current state becomes search-results-input.
+          </p>
+        </div>
+        <div style="clear:both;"></div>
+      </form>
+    </div>
+    State table
+    <br>
+    $table
+  </body>
+</html>
