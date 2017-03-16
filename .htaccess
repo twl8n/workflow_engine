@@ -1,0 +1,11 @@
+Options ExecCGI Indexes FollowSymLinks
+AddHandler cgi-script .pl
+
+DirectoryIndex index.pl index.html
+
+# RewriteEngine on
+# RewriteBase /
+# RewriteCond %{REQUEST_URI} !~
+# RewriteCond %{REQUEST_URI} ^\/.*\.pl$
+# RewriteCond %{DOCUMENT_ROOT} \/home\/mst3k\/public_html
+# RewriteRule ^(.*)$ /~mst3k/$1 [L]
