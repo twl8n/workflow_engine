@@ -40,28 +40,8 @@ sub main
     sanity_check_states();
 
     my $qq = new CGI;
+    # %ch is global, see the "our" declaration above.
     %ch = $qq->Vars();
-    
-    my $temp;
-
-    # Works
-    # foreach my $var ($qq->param('options'))
-    # {
-    #     $temp .= "$var<br>\n";
-    # }
-
-    # also works
-    # foreach my $var (split("\0", $ch{options}))
-    # {
-    #     $temp .= "$var<br>\n";
-    # }
-    
-    # my $curr_state = $default_state;
-    # if ($ch{curr_state})
-    # {
-    #     $curr_state = $ch{curr_state};
-    # }
-    # my $wait_next = '';
     
     # Get input. If none, do the default state until wait.
     
